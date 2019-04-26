@@ -1,5 +1,6 @@
 html {
-  font-family: "Catamaran", sans-serif;
+  font-family: "Montserrat", sans-serif;
+
   font-size: 100%;
   color: gray;
   text-rendering: optimizeLegibility;
@@ -12,13 +13,17 @@ main {
   padding: 5rem 5vw 2rem;
 }
 img {
-  width: 100%;
+  max-width: 100px;
+  border-radius: 50%;
+  border: 2px solid white;
+  align-self: center;
 }
 h1,
 h2,
 h3 {
   margin: 0;
   text-transform: uppercase;
+  font-family: "Catamaran", sans-serif;
 }
 p {
   margin: 0;
@@ -32,9 +37,8 @@ ul {
 ul > li {
   padding: 0;
   border-bottom: 2px solid gray;
-  font-weight: 700;
 }
-main {
+header {
   display: flex;
   margin: auto;
   padding-top: 1rem;
@@ -44,16 +48,22 @@ main {
   width: 66vw;
   display: grid;
   margin: auto;
-  grid-template-columns: auto 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr 1fr;
   grid-template-rows: auto 1fr 1fr auto auto;
   grid-gap: 1rem;
-  /* transform: rotate(-45deg); */
+  transform: rotate(-45deg);
 }
-h1:nth-child(1) {
+.cv {
+  animation-name: left;
+  animation-duration: 3s;
+  position: relative;
   grid-column: 1 / 4;
   text-align: right;
 }
-h1:nth-child(2) {
+.name {
+  animation-name: top;
+  animation-duration: 3s;
+  position: relative;
   color: #f9423a;
   writing-mode: vertical-lr;
   grid-column: 3 / 4;
@@ -62,18 +72,23 @@ h1:nth-child(2) {
   margin-top: -10px;
   margin-right: -10px;
 }
+
 .skills {
+  animation-name: left;
+  animation-duration: 3s;
+  position: relative;
   display: grid;
-  margin: auto;
-  grid-column: 1 / 3;
+  grid-column: 2 / 3;
   grid-row: 4 / span 2;
   align-self: end;
-  font-weight: 700;
 }
+
 .intro {
+  animation-name: bottom;
+  animation-duration: 3s;
+  position: relative;
   grid-column: 3 / 6;
   grid-row: 5;
-  font-family: "Montserrat", sans-serif;
   border-bottom: 25px solid #f9423a;
   align-self: start;
   justify-content: end;
@@ -81,7 +96,95 @@ h1:nth-child(2) {
   padding-bottom: 5px;
 }
 .experience {
-  grid-column: 4;
+  animation-name: right;
+  animation-duration: 3s;
+  position: relative;
+  grid-column: 4 / span 2;
   grid-row: 3;
   align-self: start;
+}
+a {
+  text-decoration: none;
+  color: gray;
+}
+footer {
+  animation-name: bottom;
+  animation-duration: 3s;
+  position: relative;
+  background: gray;
+  color: white;
+  padding: 2rem;
+}
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.foot {
+  display: grid;
+  grid-template-columns: repeat(4 * 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.contact {
+  display: grid;
+  grid-column: 1 / span 2;
+  align-self: start;
+}
+
+.picture {
+  display: grid;
+  grid-column: 4;
+  align-self: end;
+}
+footer a {
+  color: white;
+}
+@keyframes left {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes right {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes bottom {
+  0% {
+    bottom: -500px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes top {
+  0% {
+    top: -500px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    transform: rotate(0deg);
+    width: 100%;
+  }
+  header {
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .picture {
+    display: none;
+  }
 }
