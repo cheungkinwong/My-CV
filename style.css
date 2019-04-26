@@ -128,14 +128,20 @@ h4 {
 
 .contact {
   display: grid;
-  grid-column: 1 / span 2;
-  align-self: start;
+  grid-column: 1;
+  align-self: center;
+}
+.links {
+  display: grid;
+  grid-column: 2;
+  color: white;
+  align-self: center;
 }
 
 .picture {
   display: grid;
   grid-column: 4;
-  align-self: end;
+  align-self: center;
 }
 footer a {
   color: white;
@@ -185,6 +191,9 @@ footer a {
 
 @media only screen and (max-width: 428px) {
   .picture {
+    display: none;
+  }
+  .gone {
     display: none;
   }
 }
