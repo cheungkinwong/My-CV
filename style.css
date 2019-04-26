@@ -1,6 +1,87 @@
-body {
-  background-image: linear-gradient(gray, blue);
-  background-repeat: no-repeat;
+html {
   font-family: "Catamaran", sans-serif;
+  font-size: 100%;
   color: gray;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  text-size-adjust: 100%;
+}
+main {
+  background: #f6f3ea;
+  min-height: 100vh;
+  padding: 5rem 5vw 2rem;
+}
+img {
+  width: 100%;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0;
+}
+ul > li {
+  padding: 0;
+  border-bottom: 2px solid gray;
+  font-weight: 700;
+}
+main {
+  display: flex;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 12rem;
+}
+.container {
+  width: 66vw;
+  display: grid;
+  margin: auto;
+  grid-template-columns: auto 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: auto 1fr 1fr auto auto;
+  grid-gap: 1rem;
+  /* transform: rotate(-45deg); */
+}
+h1:nth-child(1) {
+  grid-column: 1 / 4;
+  text-align: right;
+}
+h1:nth-child(2) {
+  color: #f9423a;
+  writing-mode: vertical-lr;
+  grid-column: 3 / 4;
+  grid-row: 2 / 5;
+  justify-self: end;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+.skills {
+  display: grid;
+  margin: auto;
+  grid-column: 1 / 3;
+  grid-row: 4 / span 2;
+  align-self: end;
+  font-weight: 700;
+}
+.intro {
+  grid-column: 3 / 6;
+  grid-row: 5;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 25px solid #f9423a;
+  align-self: start;
+  justify-content: end;
+  line-height: 1.3;
+  padding-bottom: 5px;
+}
+.experience {
+  grid-column: 4;
+  grid-row: 3;
+  align-self: start;
 }
