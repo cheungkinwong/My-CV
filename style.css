@@ -80,7 +80,7 @@ header {
   display: grid;
   grid-column: 2 / 3;
   grid-row: 4 / span 2;
-  align-self: end;
+  justify-self: end;
 }
 
 .intro {
