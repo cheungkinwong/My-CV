@@ -66,6 +66,10 @@ footer a {
   color: white;
 }
 
+footer a:hover {
+  color: red;
+}
+
 .container {
   width: 66vw;
   display: -ms-grid;
