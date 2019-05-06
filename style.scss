@@ -10,7 +10,7 @@
   grid-column: $grid-column;
   align-self: center;
 }
-@mixin no-margin-padding {
+%no-margin-padding {
   margin: 0;
   padding: 0;
 }
@@ -39,19 +39,14 @@ img {
 h1,
 h2,
 h3 {
-  @include no-margin-padding;
+  @extend %no-margin-padding;
   text-transform: uppercase;
   font-family: "Catamaran", sans-serif;
 }
-p {
-  margin: 0;
-}
-
 ul {
   list-style: none;
-  @include no-margin-padding;
+  @extend %no-margin-padding;
   li {
-    @include no-margin-padding;
     border-bottom: 2px solid $primary;
   }
 }
@@ -98,7 +93,6 @@ footer a {
 
 .skills {
   @include animation(left);
-  display: grid;
   grid-column: 2 / 3;
   grid-row: 4 / span 2;
   justify-self: end;
