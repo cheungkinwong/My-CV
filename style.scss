@@ -60,13 +60,13 @@ header {
 a {
   text-decoration: none;
   color: $primary;
+  &:hover {
+    color: $tertiary;
+  }
 }
 
 footer a {
   color: $secondary;
-  &:hover {
-    color: $tertiary;
-  }
 }
 
 .container {
