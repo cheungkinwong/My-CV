@@ -1,5 +1,5 @@
 @mixin animation($animation-name) {
-  animation-name: left;
+  animation-name: $animation-name;
   animation-duration: 3s;
   animation-delay: 1s;
   animation-timing-function: ease-out;
@@ -7,7 +7,7 @@
 }
 @mixin grid-center($grid-column) {
   display: grid;
-  grid-column: 1;
+  grid-column: $grid-column;
   align-self: center;
 }
 @mixin no-margin-padding {
@@ -15,23 +15,25 @@
   padding: 0;
 }
 
+@import ".variable.scss";
+
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
-  color: gray;
+  color: $primarytext;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-size-adjust: 100%;
 }
 main {
-  background: #f6f3ea;
+  background: $secondary;
   min-height: 100vh;
   padding: 5rem 5vw 2rem;
 }
 img {
   max-width: 100px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid $secondary;
   align-self: center;
 }
 h1,
@@ -51,7 +53,7 @@ ul {
 }
 ul > li {
   @include no-margin-padding;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid $primarytext;
 }
 header {
   display: flex;
@@ -62,11 +64,11 @@ header {
 
 a {
   text-decoration: none;
-  color: gray;
+  color: $primarytext;
 }
 
 footer a {
-  color: white;
+  color: $secondarytext;
 }
 
 .container {
@@ -85,7 +87,7 @@ footer a {
 }
 .name {
   @include animation(top);
-  color: #f9423a;
+  color: $tertiary;
   writing-mode: vertical-lr;
   grid-column: 3 / 4;
   grid-row: 2 / 5;
@@ -106,7 +108,7 @@ footer a {
   @include animation(bottom);
   grid-column: 3 / span 3;
   grid-row: 5;
-  border-bottom: 25px solid #f9423a;
+  border-bottom: 25px solid $tertiary;
   justify-self: start;
   line-height: 1.3;
   padding-bottom: 5px;
@@ -120,8 +122,8 @@ footer a {
 
 footer {
   @include animation(bottom);
-  background: gray;
-  color: white;
+  background: $primary;
+  color: $secondary;
   padding: 2rem;
 }
 h4 {
@@ -139,7 +141,7 @@ h4 {
 }
 .links {
   @include grid-center(2);
-  color: white;
+  color: $seconary;
 }
 .picture {
   @include grid-center(4);

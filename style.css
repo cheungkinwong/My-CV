@@ -100,8 +100,8 @@ footer a {
 }
 
 .name {
-  -webkit-animation-name: left;
-          animation-name: left;
+  -webkit-animation-name: top;
+          animation-name: top;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-delay: 1s;
@@ -148,8 +148,8 @@ footer a {
 }
 
 .intro {
-  -webkit-animation-name: left;
-          animation-name: left;
+  -webkit-animation-name: bottom;
+          animation-name: bottom;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-delay: 1s;
@@ -170,8 +170,8 @@ footer a {
 }
 
 .experience {
-  -webkit-animation-name: left;
-          animation-name: left;
+  -webkit-animation-name: right;
+          animation-name: right;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-delay: 1s;
@@ -190,8 +190,8 @@ footer a {
 }
 
 footer {
-  -webkit-animation-name: left;
-          animation-name: left;
+  -webkit-animation-name: bottom;
+          animation-name: bottom;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-delay: 1s;
@@ -231,8 +231,8 @@ h4 {
 .links {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column: 1;
-  grid-column: 1;
+  -ms-grid-column: 2;
+  grid-column: 2;
   -ms-grid-row-align: center;
       align-self: center;
   color: white;
@@ -241,8 +241,8 @@ h4 {
 .picture {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column: 1;
-  grid-column: 1;
+  -ms-grid-column: 4;
+  grid-column: 4;
   -ms-grid-row-align: center;
       align-self: center;
 }
