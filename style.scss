@@ -64,6 +64,9 @@ a {
 
 footer a {
   color: $secondary;
+  &:hover {
+    color: $tertiary;
+  }
 }
 
 .container {
