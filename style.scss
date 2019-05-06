@@ -50,10 +50,10 @@ p {
 ul {
   list-style: none;
   @include no-margin-padding;
-}
-ul > li {
-  @include no-margin-padding;
-  border-bottom: 2px solid $primary;
+  li {
+    @include no-margin-padding;
+    border-bottom: 2px solid $primary;
+  }
 }
 header {
   display: flex;
@@ -132,7 +132,7 @@ h4 {
 }
 .foot {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 1rem;
 }
